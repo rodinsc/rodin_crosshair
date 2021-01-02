@@ -30,6 +30,10 @@ Citizen.CreateThread(function()
             end
         end
 
+        if not IsPedArmed(ped, 4) then
+            crosshair = false
+        end
+        
         if crosshair then
             ShowHudComponentThisFrame(14)
         elseif not crosshair then
