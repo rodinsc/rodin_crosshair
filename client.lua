@@ -16,6 +16,7 @@ local ped = GetPlayerPed(-1)
 
 Citizen.CreateThread(function()
     while true do
+        Citizen.Wait(2)
         if IsControlJustPressed(1, CrossTusu) and DoesEntityExist(ped) then
             if IsPedArmed(ped, 4) then
                 if crosshair then
@@ -39,6 +40,5 @@ Citizen.CreateThread(function()
         elseif not crosshair then
             HideHudComponentThisFrame(14)
         end
-        Citizen.Wait(2)
     end
 end)
