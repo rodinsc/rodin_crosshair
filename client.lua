@@ -12,9 +12,9 @@ Tuslar = {
 local CrossTusu = Tuslar["F5"]          --Crosshair açma/kapama tuşu buradan ayarlanabilir.
 
 local crosshair = false
-local ped = GetPlayerPed(-1)
 
 Citizen.CreateThread(function()
+    local ped = GetPlayerPed(-1)
     while true do
         Citizen.Wait(2)
         if IsControlJustPressed(1, CrossTusu) and DoesEntityExist(ped) then
